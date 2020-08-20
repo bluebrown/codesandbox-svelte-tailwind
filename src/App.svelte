@@ -1,4 +1,5 @@
 <script>
+	import Tailwindcss from "./Tailwindcss.svelte";
 	export let name;
 	let fruits;
 	let dispense = fruit => (fruits = fruits.filter(f => f !== fruit));
@@ -16,7 +17,7 @@
 		<p>
 		Visit the
 		<a href="https://tailwindcss.com/" class="text-blue-500 underline">Tailwind Documentation</a>
-		to learn how to work with this css framework.
+		to learn how to work with tailwindcss.
 	</p>
 
 

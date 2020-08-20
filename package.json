@@ -1,5 +1,5 @@
 {
-  "name": "svelte-tailwind-starter",
+  "name": "svelte-tailwind-template",
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
