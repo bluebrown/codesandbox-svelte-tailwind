@@ -24,13 +24,6 @@
 
 <hr class="my-3">
 <h2 class="font-semibold mb-2">Pick a Fruit</h2>
-	{#if fruits.length < 1} 
-			<button 
-				on:click={refill}
-				in:fly="{{ x: -300, duration: 700, delay: 250}}" 
-				class="px-3 py-1 border focus:outline-none focus:shadow-outline bg-blue-600 hover:bg-blue-500 text-white rounded-md shadow-md"
-		>Refill</button>
-	{/if}
 <ul class="flex justify-center -mx-1">
 	{#each fruits as fruit, index (fruit)}
 		<li  
@@ -43,6 +36,15 @@
 				{fruit}
 			</button>
 		</li>
+		{:else}
+		<li class="px-1 absolute">
+					<button 
+				on:click={refill}
+				in:fly="{{ x: -300, duration: 700, delay: 250}}" 
+				class="px-3 py-1 border focus:outline-none focus:shadow-outline bg-blue-600 hover:bg-blue-500 text-white rounded-md shadow-md"
+		>Refill</button>
+		</li>
+
 	{/each}
 </ul>
 
