@@ -6,7 +6,7 @@
 	refill();
 </script>
 
-<main class="text-center">
+<main class="text-center p-5">
 		<h1 class="uppercase text-6xl font-hairline text-svelte mb-3">Hello, {name}!</h1>
 	<p class="mb-1">
 		Visit the
