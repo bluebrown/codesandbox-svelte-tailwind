@@ -1,11 +1,13 @@
 <script>
 	import Tailwindcss from "./Tailwindcss.svelte";
 	import { fly } from "svelte/transition";
+	import { flip } from "svelte/animate";
 	export let name;
 	let fruits;
 	let dispense = fruit => (fruits = fruits.filter(f => f !== fruit));
 	let refill = () => (fruits = ["apple", "banana", "mango"]);
 	refill();
+	const options = {};
 </script>
 
 <main class="text-center p-5 overflow-hidden h-full">
@@ -26,9 +28,11 @@
 <h2 class="font-semibold mb-2">Pick a Fruit</h2>
 <ul class="flex justify-center -mx-1">
 	{#each fruits as fruit, index (fruit)}
-		<li  
+		<li 
+			animate:flip={options}
+			in:fly="{{ x: 300, duration: 700, delay: 250}}"
+			out:fly="{{ y: -200, duration: 700}}"
 			on:click={dispense(fruit)}
-			in:fly="{{ y: 300, duration: 1800 }}"  out:fly="{{ y: -120, duration: 700 }}"
 			class="px-1"
 		>
 			<button
