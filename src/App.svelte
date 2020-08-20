@@ -28,7 +28,7 @@
 	{#each fruits as fruit, index (fruit)}
 		<li  
 			on:click={dispense(fruit)}
-			in:fly="{{ y: 300, duration: 3000 }}"  out:fly="{{ y: -120, duration: 700 }}"
+			in:fly="{{ y: 300, duration: 1800 }}"  out:fly="{{ y: -120, duration: 700 }}"
 			class="px-1"
 		>
 			<button
@@ -40,7 +40,8 @@
 		<li class="px-1 absolute">
 					<button 
 				on:click={refill}
-				in:fly="{{ x: -300, duration: 700, delay: 250}}" 
+				in:fly="{{ x: -300, duration: 700, delay: 250}}"
+				out:fly="{{ x: -300, duration: 700, delay: 100}}"  
 				class="px-3 py-1 border focus:outline-none focus:shadow-outline bg-blue-600 hover:bg-blue-500 text-white rounded-md shadow-md"
 		>Refill</button>
 		</li>
